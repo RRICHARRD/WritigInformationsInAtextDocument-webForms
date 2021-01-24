@@ -33,7 +33,7 @@ namespace WritingInTextDocument
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.productTextBox = new System.Windows.Forms.TextBox();
             this.productLabel = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
@@ -76,12 +76,12 @@ namespace WritingInTextDocument
             this.emailLabel.TabIndex = 2;
             this.emailLabel.Text = "Email:";
             // 
-            // textBox2
+            // emailTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(42, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(575, 22);
-            this.textBox2.TabIndex = 3;
+            this.emailTextBox.Location = new System.Drawing.Point(42, 105);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(575, 22);
+            this.emailTextBox.TabIndex = 3;
             // 
             // productTextBox
             // 
@@ -108,6 +108,7 @@ namespace WritingInTextDocument
             this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // productsListBox
             // 
@@ -120,6 +121,7 @@ namespace WritingInTextDocument
             // 
             // mainForm
             // 
+            this.AcceptButton = this.addButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 450);
@@ -127,7 +129,7 @@ namespace WritingInTextDocument
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.productLabel);
             this.Controls.Add(this.productTextBox);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.nameTextBox);
@@ -146,7 +148,7 @@ namespace WritingInTextDocument
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox productTextBox;
         private System.Windows.Forms.Label productLabel;
         private System.Windows.Forms.Button saveButton;

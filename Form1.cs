@@ -25,5 +25,27 @@ namespace WritingInTextDocument
             productTextBox.Focus();
 
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            var customer = new Customer();
+
+            customer.name = nameTextBox.Text;
+            customer.email = emailTextBox.Text;
+
+            foreach (string item in productsListBox.Items)
+            {
+                customer.products.Add(item);
+            }
+
+            Data.Save(customer);
+
+            nameTextBox.Clear();
+            emailTextBox.Clear();
+            productsListBox.Items.Clear();
+
+            nameTextBox.Focus();
+        }
+
     }
 }
